@@ -6,7 +6,7 @@
 
   <groupId>transportation</groupId>
   <artifactId>transportation-models</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <packaging>jar</packaging>
 
   <properties>
@@ -28,6 +28,7 @@
       <artifactId>swagger-annotations</artifactId>
       <version>2.2.7</version>
     </dependency>
+
   </dependencies>
 
   <build>
