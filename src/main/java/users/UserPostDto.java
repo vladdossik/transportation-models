@@ -1,9 +1,11 @@
 package users;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.time.ZonedDateTime;
 
 @Data
 public class UserPostDto {
@@ -16,7 +18,7 @@ public class UserPostDto {
     @Schema(description = "Паспорт")
     private String passport;
     @Schema(description = "Дата выдачи паспорта")
-    private LocalDate issueDate;
+    private String issueDate;
     @Schema(description = "Где выдан")
     private String issuePlace;
 }
