@@ -16,7 +16,7 @@ public class UserPutDto {
     @Schema(description = "Паспорт")
     private String passport;
     @Schema(description = "Дата выдачи паспорта")
-    private LocalDate issueDate;
+    private String issueDate;
     @Schema(description = "Где выдан")
     private String issuePlace;
 }
