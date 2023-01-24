@@ -12,7 +12,7 @@
 
   <groupId>transportation</groupId>
   <artifactId>transportation-models</artifactId>
-  <version>0.0.4</version>
+  <version>0.0.5</version>
   <packaging>jar</packaging>
 
   <properties>
@@ -20,8 +20,16 @@
     <maven.compile.source>11</maven.compile.source>
     <maven.compile.target>11</maven.compile.target>
     <java.version>11</java.version>
+    <github.global.server>github</github.global.server>
   </properties>
 
+  <distributionManagement>
+    <repository>
+      <id>internal-repo</id>
+      <name>Temporary Staging Repository</name>
+      <url>file://${project.build.directory}/mvn-repo</url>
+    </repository>
+  </distributionManagement>
 
   <dependencies>
     <dependency>
@@ -49,6 +57,8 @@
   </dependencies>
 
   <build>
+
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -59,6 +69,40 @@
           <encoding>UTF-8</encoding>
         </configuration>
       </plugin>
+
+
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>com.github.github</groupId>
+        <artifactId>site-maven-plugin</artifactId>
+        <version>0.3</version>
+        <configuration>
+          <message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
+          <noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
+          <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
+          <branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
+          <includes><include>**/*</include></includes>
+          <repositoryName>transportation-models</repositoryName>      <!-- github repo name -->
+          <repositoryOwner>vladdossik</repositoryOwner>
+        </configuration>
+        <executions>
+          <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
+          <execution>
+            <goals>
+              <goal>site</goal>
+            </goals>
+            <phase>deploy</phase>
+          </execution>
+        </executions>
+      </plugin>
+
     </plugins>
   </build>
 </project>
