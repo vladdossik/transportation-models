@@ -10,7 +10,7 @@
     <relativePath/>
   </parent>
 
-  <groupId>transportation</groupId>
+  <groupId>com.github.vladdossik</groupId>
   <artifactId>transportation-models</artifactId>
   <version>0.0.4</version>
   <packaging>jar</packaging>
