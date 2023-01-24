@@ -12,7 +12,9 @@
 
   <groupId>com.github.vladdossik</groupId>
   <artifactId>transportation-models</artifactId>
+
   <version>0.0.4-SNAPSHOT</version>
+
   <packaging>jar</packaging>
 
   <properties>
