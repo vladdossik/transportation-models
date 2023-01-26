@@ -2,8 +2,6 @@ package users;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
-
-import java.time.LocalDate;
 import java.time.ZonedDateTime;
 
 @Data
