@@ -1,4 +1,4 @@
-package exeption;
+package exception;
 
 import lombok.Data;
 import java.time.LocalDate;
