@@ -3,9 +3,12 @@ package users;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import java.time.ZonedDateTime;
+import java.util.UUID;
 
 @Data
 public class UserResponseDto {
+    @Schema(description = "Внешний id")
+    private UUID externalId;
     @Schema(description = "Имя")
     private String firstName;
     @Schema(description = "Фамилия")
