@@ -13,7 +13,7 @@
 
   <groupId>com.github.vladdossik</groupId>
   <artifactId>transportation-models</artifactId>
-  <version>0.4-SNAPSHOT</version>
+  <version>v.0.0.6</version>
   <packaging>jar</packaging>
 
   <name>Transportation models lib</name>
