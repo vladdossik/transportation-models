@@ -31,4 +31,14 @@ public class EmailNotificationDto extends Notification {
         this.bcc = bcc;
         this.subject = subject;
     }
+
+    @Override
+    public Integer getUuid() {
+        return super.getUuid();
+    }
+
+    @Override
+    public void setUuid(Integer uuid) {
+        super.setUuid(uuid);
+    }
 }
