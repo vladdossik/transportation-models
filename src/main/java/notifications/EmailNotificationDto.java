@@ -8,9 +8,7 @@ import javax.validation.constraints.NotNull;
 
 @Data
 @JsonInclude(JsonInclude.Include.USE_DEFAULTS)
-public class EmailNotificationDto {
-    @Schema(description = "UUID пользователя")
-    private Integer uuid;
+public class EmailNotificationDto extends Notification {
     @Schema(description = "Кому")
     private String to;
     @Schema(description = "Копия")
@@ -20,9 +18,4 @@ public class EmailNotificationDto {
     @NotNull
     @Schema(description = "Тема письма")
     private String subject;
-    @NotNull
-    @Schema(description = "Сообщение")
-    private String message;
-//    @Schema(description = "Приложенный файл")
-//    private File attachment;
 }
