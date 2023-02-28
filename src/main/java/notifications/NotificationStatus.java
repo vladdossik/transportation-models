@@ -1,9 +1,7 @@
 package notifications;
 
-import lombok.Data;
-
-@Data
-public class NotificationStatus {
-    private Notification notification;
-    private String status;
+public enum NotificationStatus {
+    PENDING,
+    SENT,
+    FAILED
 }

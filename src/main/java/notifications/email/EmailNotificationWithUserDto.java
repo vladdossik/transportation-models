@@ -1,19 +1,23 @@
-package notifications;
+package notifications.email;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.*;
+import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 
-@AllArgsConstructor
-public class Notification {
-    @Getter(AccessLevel.PUBLIC)
-    @Setter(AccessLevel.PUBLIC)
+@Data
+public class EmailNotificationWithUserDto {
     @Schema(description = "UUID пользователя")
     private Integer uuid;
+
+    @NotNull
+    @Schema(description = "Тема письма")
+    private String subject;
+
     @NotNull
     @Schema(description = "Сообщение")
-    private String message;
+    private String content;
+
 //    @Schema(description = "Приложенный файл")
 //    private File attachment;
 }
