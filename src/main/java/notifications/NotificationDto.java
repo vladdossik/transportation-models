@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Data
-public class NotificationDao {
+public class NotificationDto {
     @Schema(description = "ID пользователя")
     private UUID userId;
 
