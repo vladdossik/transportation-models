@@ -9,4 +9,6 @@ public class BillPutDto {
     private Double amount;
     @Schema(description = "дата до оплаты заказа")
     private String paymentDate;
+    @Schema(description = "статус оплаты заказа")
+    private Boolean wasPaid;
 }
