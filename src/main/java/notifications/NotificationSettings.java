@@ -1,7 +1,6 @@
 package notifications;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
@@ -21,4 +20,6 @@ public class NotificationSettings {
     @Schema(description = "Сообщение")
     private String message;
 
+//    @Schema(description = "Файл")
+//    private UUID attachmentID;
 }

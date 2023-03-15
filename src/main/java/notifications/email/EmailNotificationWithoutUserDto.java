@@ -7,6 +7,7 @@ import javax.validation.constraints.NotNull;
 
 @Data
 public class EmailNotificationWithoutUserDto {
+    @NotNull
     @Schema(description = "Кому")
     private String to;
 

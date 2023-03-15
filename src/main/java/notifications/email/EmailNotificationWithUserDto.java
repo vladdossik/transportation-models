@@ -8,6 +8,7 @@ import java.util.UUID;
 
 @Data
 public class EmailNotificationWithUserDto {
+    @NotNull
     @Schema(description = "UUID пользователя")
     private UUID uuid;
 

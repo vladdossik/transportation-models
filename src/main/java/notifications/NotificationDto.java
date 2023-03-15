@@ -15,7 +15,4 @@ public class NotificationDto {
 
     @Schema(description = "Тип уведомления")
     private NotificationType type;
-
-//    @Schema(description = "Приложенный файл")
-//    private File attachment;
 }
